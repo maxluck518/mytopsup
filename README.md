@@ -4,7 +4,7 @@
 
 ## 使用步骤（仅Android可用）
 
-有关baidu OCR，请移步详细帮助，[链接](/baiduApiVersion)
+有关baidu OCR，请移步详细帮助，[链接](/baidu)
 
 #### 1. 安装 ADB
 
