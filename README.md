@@ -4,7 +4,7 @@
 
 ## 使用步骤（仅Android可用）
 
-有关baidu OCR，请移步详细帮助，[链接](/baiduApiVersion)
+有关baidu OCR，请移步详细帮助，[链接](/baidu)
 
 #### 1. 安装 ADB
 
@@ -31,28 +31,30 @@ api_secret = ''
 
 ##### 辅助策咯：
 
-   	1.  打开浏览器查询
-   	2.  词频搜索
+       	1.  打开浏览器查询
+       2.  词频搜索
 
 ##### 使用方法：
 
 1. 在`./config/settings.py`中修改增加可支持的app参数（region,pos）
 
    ```
-   # 添加app
-   SUPPORT_APP_TYPE = ["uc","dabai"]
-   # 定义答题框范围
-   REGION_DICT = {
-           'uc' : (75, 400, 990, 1220),
-           'dabai' : (75, 400, 990, 1220),
-           'default' : (75, 350, 990, 1200)
-           }
-   # choices起始位置，避免选项前缀干扰
-   POS_DICT = {
-           'uc' : 2 ,
-           'dabai' : 1 ,
-           'default' : 0
-           }
+    # 添加app
+    SUPPORT_APP_TYPE = ["youku","uc","dabai"]
+    # 定义答题框范围
+    REGION_DICT = {
+            'youku':(75, 350, 990, 1300),
+            'uc' : (75, 400, 990, 1220),
+            'dabai' : (75, 400, 990, 1220),
+            'default' : (75, 350, 990, 1200)
+            }
+    # choices起始位置，避免选项前缀干扰
+    POS_DICT = {
+            'youku' : 2 ,
+            'uc' : 2 ,
+            'dabai' : 1 ,
+            'default' : 0
+            }
    ```
 
 2. 命令行下运行：
@@ -67,4 +69,9 @@ api_secret = ''
 
    ```
    python mjwGetQuestionTessAndroid.py uc
+   ```
+   支持优酷答题软件，命令行下输入：
+
+   ```
+   python mjwGetQuestionTessAndroid.py youku
    ```

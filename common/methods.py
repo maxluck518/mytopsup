@@ -8,6 +8,8 @@ import requests
 import webbrowser
 
 def open_webbrowser(question):
+    #  real_question = question + " site:zhidao.baidu.com"
+    #  webbrowser.open('https://baidu.com/s?wd=' + question)
     webbrowser.open('https://baidu.com/s?wd=' + question)
 
 def open_webbrowser_count(question,choices):
@@ -32,7 +34,11 @@ def open_webbrowser_count(question,choices):
 def count_base(question,choices):
     #  print('\n-- 方法3： 题目搜索结果包含选项词频计数法 --\n')
     # 请求
+    #  req = requests.get(url='http://www.baidu.com/s', params={'wd':question})
+    #  real_question = question + " site:zhidao.baidu.com"
+    real_question = question + " site:baike.baidu.com"
     req = requests.get(url='http://www.baidu.com/s', params={'wd':question})
+    #  req = requests.get(url='http://www.baidu.com/s', params={'wd':real_question})
     content = req.text
     counts = []
     #  print('Question: '+question)
