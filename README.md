@@ -73,5 +73,5 @@ api_secret = ''
    支持优酷答题软件，命令行下输入：
 
    ```
-   python RunAndroid.py uc
+   python RunAndroid.py youku
    ```
