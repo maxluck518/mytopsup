@@ -68,10 +68,14 @@ api_secret = ''
    支持UC浏览器答题软件，命令行下输入：
 
    ```
+<<<<<<< HEAD
    python mjwGetQuestionTessAndroid.py uc
    ```
    支持优酷答题软件，命令行下输入：
 
    ```
    python mjwGetQuestionTessAndroid.py youku
+=======
+   python RunAndroid.py uc
+>>>>>>> db5f51dabbbb36c1e762a550f68a54ee48f9a666
    ```
